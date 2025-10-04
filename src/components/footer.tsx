@@ -64,7 +64,7 @@ export default function Footer() {
               <Logo />
             </Link>
           <div className="flex space-x-6 mt-6">
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.youtube.com/@Danycarlmusic" className="text-muted-foreground hover:text-primary transition-colors">
               <Youtube className="h-6 w-6" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
