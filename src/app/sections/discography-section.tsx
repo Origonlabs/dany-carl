@@ -11,14 +11,14 @@ const albums = [
 
 export default function DiscographySection() {
   return (
-    <section id="discography" className="w-full py-24 sm:py-32 lg:py-40 bg-background">
+    <section id="discography" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
-            Discography
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
+            Discografía
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore a sonic journey through a universe of fading echoes and neon shadows.
+            Explora un viaje sónico a través de un universo de ecos desvanecidos y sombras de neón.
           </p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">

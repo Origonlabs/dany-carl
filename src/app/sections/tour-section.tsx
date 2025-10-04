@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Ticket } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const tourDates = [
   { city: "Tomorrowland", venue: "Dreamville", date: "15 JUL" },
@@ -12,33 +12,32 @@ export default function TourSection() {
     <section className="w-full py-24 sm:py-32 lg:py-40 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
-            Upcoming Dates
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
+            Próximas Fechas
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Experience the sound of the future live. Join the vision.
+            Vive la experiencia del futuro en vivo. Únete a la visión.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
-          <ul className="space-y-4">
+          <ul className="border-t">
             {tourDates.map((tour, i) => (
               <li
                 key={i}
-                className="animate-fade-in-up"
+                className="animate-fade-in-up border-b"
                 style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
               >
-                <div className="flex items-center p-6 rounded-lg bg-card border border-border hover:bg-secondary/50 transition-colors duration-300 group hover:border-primary/50">
-                  <div className="flex flex-col items-center justify-center w-20 text-center mr-6">
-                    <span className="text-4xl font-headline font-bold text-primary">{tour.date.split(' ')[0]}</span>
-                    <span className="text-sm font-body tracking-wider text-muted-foreground">{tour.date.split(' ')[1]}</span>
+                <div className="flex items-center p-6 group">
+                  <div className="w-24 text-left">
+                    <span className="text-lg font-headline font-bold text-foreground">{tour.date}</span>
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold font-headline text-foreground">{tour.city}</h3>
                     <p className="text-muted-foreground">{tour.venue}</p>
                   </div>
-                  <Button variant="outline" className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary-foreground">
-                    <Ticket className="mr-2 h-4 w-4" />
+                  <Button variant="ghost" className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Tickets
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </li>

@@ -1,23 +1,23 @@
 export default function MusicSection() {
   return (
-    <section className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/20">
+    <section className="w-full py-24 sm:py-32 lg:py-40 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
-            Listen on Spotify
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
+            Escucha en Spotify
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            The full collection, right here. The sound of the future.
+            La colección completa, aquí mismo. El sonido del futuro.
           </p>
         </div>
         <div
           className="max-w-5xl mx-auto animate-fade-in-up"
           style={{ animationDelay: `200ms`, animationFillMode: 'backwards' }}
         >
-          <div className="rounded-xl overflow-hidden shadow-2xl transition-shadow duration-300 hover:shadow-primary/20 border border-border">
+          <div className="overflow-hidden border">
             <iframe
               data-testid="embed-iframe"
-              src="https://open.spotify.com/embed/artist/1KYZDy7IEf3fxTuVYvu3UJ?utm_source=generator&theme=0"
+              src="https://open.spotify.com/embed/artist/1KYZDy7IEf3fxTuVYvu3UJ?utm_source=generator"
               width="100%"
               height="352"
               frameBorder="0"

@@ -19,13 +19,13 @@ import { Send } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "El nombre debe tener al menos 2 caracteres.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Por favor, introduce una dirección de email válida.",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "El mensaje debe tener al menos 10 caracteres.",
   }),
 });
 
@@ -44,8 +44,8 @@ export default function ContactSection() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: "¡Mensaje Enviado!",
+      description: "Gracias por contactar. Te responderé pronto.",
     });
     form.reset();
   }
@@ -54,11 +54,11 @@ export default function ContactSection() {
     <section id="contact" className="w-full py-24 sm:py-32 lg:py-40 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
-            Contact
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
+            Contacto
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to book me for an event? Let's talk.
+            ¿Tienes un proyecto en mente o quieres contratarme para un evento? Hablemos.
           </p>
         </div>
         <div className="max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: `200ms`, animationFillMode: 'backwards' }}>
@@ -69,9 +69,9 @@ export default function ContactSection() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel>Nombre</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your name" {...field} />
+                      <Input placeholder="Tu nombre" {...field} className="rounded-none" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -84,7 +84,7 @@ export default function ContactSection() {
                   <FormItem>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="your.email@example.com" {...field} />
+                      <Input placeholder="tu.email@ejemplo.com" {...field} className="rounded-none" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -95,20 +95,20 @@ export default function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>Mensaje</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Tell me about your project or event..."
+                        placeholder="Háblame de tu proyecto o evento..."
                         {...field}
-                        className="min-h-[150px]"
+                        className="min-h-[150px] rounded-none"
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full font-bold text-lg">
-                Send Message
+              <Button type="submit" size="lg" className="w-full font-bold text-lg rounded-none">
+                Enviar Mensaje
                 <Send className="ml-2 h-5 w-5" />
               </Button>
             </form>
