@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -16,6 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import { GlowButton } from "@/components/glow-button";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -107,10 +107,10 @@ export default function ContactPage() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full font-bold text-lg">
+              <GlowButton type="submit" className="w-full">
                 Enviar Mensaje
                 <Send className="ml-2 h-5 w-5" />
-              </Button>
+              </GlowButton>
             </form>
           </Form>
         </div>

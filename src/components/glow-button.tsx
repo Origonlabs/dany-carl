@@ -8,7 +8,10 @@ import { ArrowDown } from "lucide-react";
 interface GlowButtonProps {
   children: React.ReactNode;
   variant?: "blue" | "pink" | "green";
-  href: string;
+  href?: string;
+  type?: "button" | "submit" | "reset";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 }
 
 const variants = {
@@ -121,51 +124,64 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   children,
   variant = "blue",
   href,
+  type = "button",
+  onClick,
+  className
 }) => {
   const isDark = useTheme();
   const variantColors = variants[variant] || variants.blue;
   const colors = isDark ? variantColors.dark : variantColors.light;
 
-  return (
-    <Link href={href} passHref>
-      <button
-        className="relative cursor-pointer rounded-2xl border-none p-0.5 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+  const buttonContent = (
+    <button
+      type={type}
+      onClick={onClick}
+      className={cn("relative cursor-pointer rounded-2xl border-none p-0.5 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95", className)}
+      style={{
+        background: colors.outerBg,
+      }}
+    >
+      <div
+        className="absolute top-0 right-0 h-[60%] w-[65%] rounded-[120px] -z-10"
+        style={{ boxShadow: `0 0 30px ${colors.outerGlow}` }}
+      ></div>
+
+      <div
+        className="absolute bottom-0 left-0 h-full w-[70px] rounded-2xl"
         style={{
-          background: colors.outerBg,
+          boxShadow: `-10px 10px 30px ${colors.blobShadow}`,
+          background: `radial-gradient(circle 60px at 0% 100%, ${colors.blobHighlight}, ${colors.blobGlow}, transparent)`,
+        }}
+      ></div>
+
+      <div
+        className="relative z-20 flex h-11 items-center justify-center overflow-hidden rounded-[14px] px-8"
+        style={{
+          background: colors.innerBg,
+          color: colors.textColor,
         }}
       >
         <div
-          className="absolute top-0 right-0 h-[60%] w-[65%] rounded-[120px] -z-10"
-          style={{ boxShadow: `0 0 30px ${colors.outerGlow}` }}
-        ></div>
-
-        <div
-          className="absolute bottom-0 left-0 h-full w-[70px] rounded-2xl"
+          className="absolute top-0 left-0 h-full w-full rounded-[14px]"
           style={{
-            boxShadow: `-10px 10px 30px ${colors.blobShadow}`,
-            background: `radial-gradient(circle 60px at 0% 100%, ${colors.blobHighlight}, ${colors.blobGlow}, transparent)`,
+            background: `radial-gradient(circle 60px at 0% 100%, ${colors.innerHighlight}, ${colors.innerGlow}, transparent)`,
           }}
         ></div>
 
-        <div
-          className="relative z-20 flex h-11 items-center justify-center overflow-hidden rounded-[14px] px-8"
-          style={{
-            background: colors.innerBg,
-            color: colors.textColor,
-          }}
-        >
-          <div
-            className="absolute top-0 left-0 h-full w-full rounded-[14px]"
-            style={{
-              background: `radial-gradient(circle 60px at 0% 100%, ${colors.innerHighlight}, ${colors.innerGlow}, transparent)`,
-            }}
-          ></div>
-
-          <span className="relative z-10 flex items-center whitespace-nowrap text-lg font-semibold">
-            {children}
-          </span>
-        </div>
-      </button>
-    </Link>
+        <span className="relative z-10 flex items-center whitespace-nowrap text-lg font-semibold">
+          {children}
+        </span>
+      </div>
+    </button>
   );
+
+  if (href) {
+    return (
+      <Link href={href} passHref>
+        {buttonContent}
+      </Link>
+    );
+  }
+
+  return buttonContent;
 };
