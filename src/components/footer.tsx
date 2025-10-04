@@ -76,7 +76,7 @@ export default function Footer() {
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
               <WhatsAppIcon className="h-6 w-6" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.facebook.com/dany.carl.188597/" className="text-muted-foreground hover:text-primary transition-colors">
               <Facebook className="h-6 w-6" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
