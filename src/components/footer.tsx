@@ -67,7 +67,7 @@ export default function Footer() {
             <Link href="https://www.youtube.com/@Danycarlmusic" className="text-muted-foreground hover:text-primary transition-colors">
               <Youtube className="h-6 w-6" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.tiktok.com/@danycarlmusic" className="text-muted-foreground hover:text-primary transition-colors">
               <TikTokIcon className="h-6 w-6" />
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
