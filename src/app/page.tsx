@@ -4,6 +4,7 @@ import DiscographySection from "@/app/sections/discography-section";
 import MusicSection from "@/app/sections/music-section";
 import VideoSection from "@/app/sections/video-section";
 import TourSection from "@/app/sections/tour-section";
+import CopyrightSection from "@/app/sections/copyright-section";
 import ContactSection from "@/app/sections/contact-section";
 import Footer from "@/components/footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <MusicSection />
         <VideoSection />
         <TourSection />
+        <CopyrightSection />
         <ContactSection />
       </main>
       <Footer />
