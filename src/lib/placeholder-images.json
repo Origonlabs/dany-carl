@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Dystopian futuristic landscape with a hooded figure",
-      "imageUrl": "https://images.unsplash.com/photo-1685355118321-64453bf4f89a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkeXN0b3BpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NTU2NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dystopian landscape"
+      "description": "Abstract sound waves background",
+      "imageUrl": "https://images.unsplash.com/photo-1534723452862-4c874018d66d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMG11c2ljfGVufDB8fHx8MTc2MDMxNTAzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract music"
     },
     {
       "id": "album-1",

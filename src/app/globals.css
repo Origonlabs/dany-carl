@@ -8,13 +8,13 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 98%;
+    --foreground: 222 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 222 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --popover-foreground: 222 84% 4.9%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -26,7 +26,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --ring: 217 91% 60%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -42,26 +42,27 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
-    --background: 220 10% 12%;
+    --background: 222 84% 4.9%;
     --foreground: 0 0% 98%;
-    --card: 220 10% 16%;
+    --card: 222 84% 4.9%;
     --card-foreground: 0 0% 98%;
-    --popover: 220 10% 10%;
+    --popover: 222 84% 4.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 195 100% 50%;
-    --primary-foreground: 0 0% 8%;
-    --secondary: 0 0% 19%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 84% 4.9%;
+    --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 19%;
+    --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 182 100% 74%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 10% 24%;
-    --input: 220 10% 24%;
-    --ring: 195 100% 50%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -88,104 +89,7 @@ body {
 }
 
 @layer utilities {
-  .glitch {
-    position: relative;
-    color: hsl(var(--primary));
-    text-shadow:
-      0 0 2px hsl(var(--primary) / 0.8),
-      0 0 10px hsl(var(--primary) / 0.6),
-      0 0 20px hsl(var(--primary) / 0.4);
-  }
-
-  .glitch::after,
-  .glitch::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: hsl(var(--background));
-    overflow: hidden;
-  }
-  
-  .glitch::before {
-    left: 3px;
-    text-shadow: -2px 0 hsl(var(--accent));
-    animation: glitch-effect-1 3s infinite linear alternate-reverse;
-  }
-
-  .glitch::after {
-    left: -3px;
-    text-shadow: -2px 0 hsl(var(--primary) / 0.5);
-    animation: glitch-effect-2 5s infinite linear alternate-reverse;
-  }
-
-  .aurora-bg {
-    background-image: 
-      radial-gradient(ellipse 50% 50% at 20% 40%, hsl(var(--primary) / 0.15), transparent),
-      radial-gradient(ellipse 50% 50% at 80% 60%, hsl(var(--accent) / 0.1), transparent);
-    animation: aurora 20s infinite linear;
-  }
-  
   .animation-delay-200 { animation-delay: 200ms; }
   .animation-delay-400 { animation-delay: 400ms; }
   .animation-delay-600 { animation-delay: 600ms; }
-
-  @keyframes glitch-effect-1 {
-    0% { clip-path: inset(39% 0 23% 0); }
-    5% { clip-path: inset(45% 0 33% 0); }
-    10% { clip-path: inset(21% 0 53% 0); }
-    15% { clip-path: inset(55% 0 13% 0); }
-    20% { clip-path: inset(11% 0 83% 0); }
-    25% { clip-path: inset(62% 0 13% 0); }
-    30% { clip-path: inset(80% 0 4% 0); }
-    35% { clip-path: inset(19% 0 43% 0); }
-    40% { clip-path: inset(93% 0 1% 0); }
-    45% { clip-path: inset(4% 0 91% 0); }
-    50% { clip-path: inset(71% 0 8% 0); }
-    55% { clip-path: inset(29% 0 48% 0); }
-    60% { clip-path: inset(94% 0 1% 0); }
-    65% { clip-path: inset(23% 0 64% 0); }
-    70% { clip-path: inset(88% 0 3% 0); }
-    75% { clip-path: inset(45% 0 23% 0); }
-    80% { clip-path: inset(19% 0 78% 0); }
-    85% { clip-path: inset(99% 0 1% 0); }
-    90% { clip-path: inset(31% 0 43% 0); }
-    95% { clip-path: inset(82% 0 3% 0); }
-    100% { clip-path: inset(27% 0 58% 0); }
-  }
-
-  @keyframes glitch-effect-2 {
-    0% { clip-path: inset(77% 0 11% 0); }
-    5% { clip-path: inset(49% 0 42% 0); }
-    10% { clip-path: inset(13% 0 54% 0); }
-    15% { clip-path: inset(81% 0 8% 0); }
-    20% { clip-path: inset(33% 0 45% 0); }
-    25% { clip-path: inset(3% 0 76% 0); }
-    30% { clip-path: inset(62% 0 29% 0); }
-    35% { clip-path: inset(91% 0 2% 0); }
-    40% { clip-path: inset(41% 0 38% 0); }
-    45% { clip-path: inset(82% 0 5% 0); }
-    50% { clip-path: inset(19% 0 71% 0); }
-    55% { clip-path: inset(66% 0 18% 0); }
-    60% { clip-path: inset(38% 0 41% 0); }
-    65% { clip-path: inset(94% 0 3% 0); }
-    70% { clip-path: inset(52% 0 31% 0); }
-    75% { clip-path: inset(11% 0 69% 0); }
-    80% { clip-path: inset(73% 0 12% 0); }
-    85% { clip-path: inset(3% 0 81% 0); }
-    90% { clip-path: inset(58% 0 22% 0); }
-    95% { clip-path: inset(21% 0 49% 0); }
-    100% { clip-path: inset(91% 0 4% 0); }
-  }
-
-  @keyframes aurora {
-    from {
-      background-position: 50% 50%, 50% 50%;
-    }
-    to {
-      background-position: 350% 50%, 350% 50%;
-    }
-  }
 }

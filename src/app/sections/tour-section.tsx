@@ -9,10 +9,10 @@ const tourDates = [
 
 export default function TourSection() {
   return (
-    <section className="w-full py-24 sm:py-32 lg:py-40 bg-background/80 backdrop-blur-sm">
+    <section className="w-full py-24 sm:py-32 lg:py-40 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-primary">
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
             Upcoming Dates
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -27,16 +27,16 @@ export default function TourSection() {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
               >
-                <div className="flex items-center p-4 rounded-lg bg-card/50 border border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 transform hover:scale-[1.02] group">
-                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-md mr-6">
-                    <span className="text-2xl font-headline font-bold">{tour.date.split(' ')[0]}</span>
-                    <span className="text-xs font-body tracking-widest absolute mt-8">{tour.date.split(' ')[1]}</span>
+                <div className="flex items-center p-6 rounded-lg bg-card border hover:bg-secondary/50 transition-colors duration-300 group">
+                  <div className="flex flex-col items-center justify-center w-16 text-center mr-6">
+                    <span className="text-3xl font-headline font-bold text-primary">{tour.date.split(' ')[0]}</span>
+                    <span className="text-sm font-body tracking-wider text-muted-foreground">{tour.date.split(' ')[1]}</span>
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold font-headline text-foreground">{tour.city}</h3>
                     <p className="text-muted-foreground">{tour.venue}</p>
                   </div>
-                  <Button variant="ghost" size="icon" className="w-auto px-4 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 text-primary-foreground hover:bg-primary">
+                  <Button variant="outline" className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Ticket className="mr-2 h-4 w-4" />
                     Tickets
                   </Button>
