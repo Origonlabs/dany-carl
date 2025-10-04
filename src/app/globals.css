@@ -117,6 +117,14 @@ body {
     animation: glitch-effect 2s infinite linear alternate-reverse;
   }
 
+  .aurora-bg {
+    animation: aurora 20s infinite linear;
+  }
+  
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+
   @keyframes glitch-effect {
     0% { clip-path: inset(43% 0 23% 0); }
     2% { clip-path: inset(50% 50% 50% 50%); }

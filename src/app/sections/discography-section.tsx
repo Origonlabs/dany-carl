@@ -1,4 +1,5 @@
 import AlbumCard from "@/components/album-card";
+import { cn } from "@/lib/utils";
 
 const albums = [
   { title: 'Faded Echoes', year: '2023', imageId: 'album-1' },
@@ -13,7 +14,7 @@ export default function DiscographySection() {
   return (
     <section className="w-full py-20 md:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
             Discography
           </h2>
@@ -22,8 +23,14 @@ export default function DiscographySection() {
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {albums.map((album) => (
-            <AlbumCard key={album.title} album={album} />
+          {albums.map((album, i) => (
+            <div
+              key={album.title}
+              className="animate-fade-in-up"
+              style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
+            >
+              <AlbumCard album={album} />
+            </div>
           ))}
         </div>
       </div>
