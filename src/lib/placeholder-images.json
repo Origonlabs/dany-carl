@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Dystopian futuristic landscape with a hooded figure",
+      "imageUrl": "https://images.unsplash.com/photo-1685355118321-64453bf4f89a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkeXN0b3BpYW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzU5NTU2NzAyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dystopian landscape"
+    },
+    {
+      "id": "album-1",
+      "description": "Album cover for Faded Echoes",
+      "imageUrl": "https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhYnN0cmFjdCUyMGdlb21ldHJpY3xlbnwwfHx8fDE3NTk1NTU2NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract geometric"
+    },
+    {
+      "id": "album-2",
+      "description": "Album cover for Neon Shadows",
+      "imageUrl": "https://images.unsplash.com/photo-1687191591471-e3b46d40a0e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmdXR1cmlzdGljJTIwZGlnaXRhbHxlbnwwfHx8fDE3NTk1NTY3MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "futuristic digital"
+    },
+    {
+      "id": "album-3",
+      "description": "Album cover for Digital Soul",
+      "imageUrl": "https://images.unsplash.com/photo-1533577116850-9cc66cad8a9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjeWJlcnB1bmslMjBjaXR5fGVufDB8fHx8MTc1OTQ5ODQwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyberpunk city"
+    },
+    {
+      "id": "album-4",
+      "description": "Album cover for Cybernetic Dreams",
+      "imageUrl": "https://images.unsplash.com/photo-1532896374032-fdffb11e2b8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z2xvd2luZyUyMGxpbmVzfGVufDB8fHx8MTc1OTU1NjcwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "glowing lines"
+    },
+    {
+      "id": "album-5",
+      "description": "Album cover for Void Runner",
+      "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzcGFjZSUyMG5lYnVsYXxlbnwwfHx8fDE3NTk0NzM4MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "space nebula"
+    },
+    {
+      "id": "album-6",
+      "description": "Album cover for Singularity",
+      "imageUrl": "https://images.unsplash.com/photo-1747655760627-c53acf6b9b8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwc3ltYm9sfGVufDB8fHx8MTc1OTU1NjcwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist symbol"
+    }
+  ]
 }
