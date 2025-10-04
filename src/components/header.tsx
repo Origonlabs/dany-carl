@@ -20,7 +20,7 @@ const navLinks = [
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <header className="absolute top-0 left-0 w-full z-50 p-4 sm:p-6 lg:p-8">
+    <header className="w-full z-50 p-4 sm:p-6 lg:p-8">
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="shrink-0">
