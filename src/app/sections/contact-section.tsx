@@ -58,7 +58,7 @@ export default function ContactSection() {
             Contact
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to book me for an event? Let&apos;s talk.
+            Have a project in mind or want to book me for an event? Let's talk.
           </p>
         </div>
         <div className="max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: `200ms`, animationFillMode: 'backwards' }}>

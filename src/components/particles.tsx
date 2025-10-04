@@ -14,7 +14,7 @@ interface Particle {
 
 const Particles = ({
   className,
-  quantity = 150,
+  quantity = 100,
 }: {
   className?: string;
   quantity?: number;
@@ -33,14 +33,20 @@ const Particles = ({
 
     const createParticles = () => {
       particles = [];
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+      const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+
       for (let i = 0; i < quantity; i++) {
+        const isPrimary = Math.random() > 0.5;
+        const color = isPrimary ? primaryColor : accentColor;
+        const alpha = Math.random() * 0.5 + 0.2;
         particles.push({
           x: Math.random() * w,
           y: Math.random() * h,
           size: Math.random() * 1.5 + 0.5,
           speedX: (Math.random() - 0.5) * 0.3,
           speedY: (Math.random() - 0.5) * 0.3,
-          color: `hsla(182, 100%, 74%, ${Math.random() * 0.5 + 0.2})`, // Electric blue with alpha
+          color: `hsla(${color}, ${alpha})`,
         });
       }
     };
@@ -70,10 +76,14 @@ const Particles = ({
       h = canvas.height = canvas.offsetHeight;
       createParticles();
     };
+    
+    // Ensure CSS variables are loaded
+    setTimeout(() => {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      animate();
+    }, 100);
 
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    animate();
 
     return () => {
       window.removeEventListener('resize', handleResize);

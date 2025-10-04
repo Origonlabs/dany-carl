@@ -43,25 +43,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 0 0% 8%;
+    --background: 220 10% 8%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 12%;
+    --card: 220 10% 12%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 10%;
+    --popover: 220 10% 10%;
     --popover-foreground: 0 0% 98%;
-    --primary: 182 100% 74%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 8%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 182 100% 84%;
+    --accent: 182 100% 74%;
     --accent-foreground: 0 0% 8%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 182 100% 74%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 195 100% 50%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -178,5 +178,14 @@ body {
     90% { clip-path: inset(58% 0 22% 0); }
     95% { clip-path: inset(21% 0 49% 0); }
     100% { clip-path: inset(91% 0 4% 0); }
+  }
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
   }
 }
