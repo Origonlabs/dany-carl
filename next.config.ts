@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.bucket.opendex.dev',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.origonlabs.opendex.dev',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

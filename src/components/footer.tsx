@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Instagram, Facebook, Youtube } from "lucide-react";
 import { Logo } from "./logo";
+import Image from "next/image";
 
 const SpotifyIcon = (props: React.ComponentProps<'svg'>) => (
     <svg
@@ -77,6 +78,18 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground text-center md:text-right">
             &copy; {new Date().getFullYear()} Dany Carl. All rights reserved.
           </p>
+        </div>
+        <div className="mt-8 pt-8 border-t border-border/20 flex justify-center items-center gap-2">
+            <p className="text-xs text-muted-foreground">Desarrollado por</p>
+            <a href="https://origon.dev" target="_blank" rel="noopener noreferrer">
+                <Image 
+                    src="https://cdn.origonlabs.opendex.dev/icons/Logo_Origon_LInux.svg"
+                    alt="Origon Logo"
+                    width={80}
+                    height={20}
+                    className="object-contain"
+                />
+            </a>
         </div>
       </div>
     </footer>
