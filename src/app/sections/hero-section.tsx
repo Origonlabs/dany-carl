@@ -9,7 +9,7 @@ export default function HeroSection() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden bg-background">
+    <section className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden bg-background py-24 sm:py-32 lg:py-40">
       {heroImage && (
         <Image
           src={heroImage.imageUrl}
@@ -20,7 +20,7 @@ export default function HeroSection() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background z-10" />
       <div className="absolute inset-0 aurora-bg z-0" />
       <Particles className="absolute inset-0 z-20" quantity={100} />
       

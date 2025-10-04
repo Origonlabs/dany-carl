@@ -9,7 +9,7 @@ const tourDates = [
 
 export default function TourSection() {
   return (
-    <section className="w-full py-20 md:py-32 bg-background/80 backdrop-blur-sm">
+    <section className="w-full py-24 sm:py-32 lg:py-40 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-primary">
