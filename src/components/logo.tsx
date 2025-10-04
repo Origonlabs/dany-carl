@@ -3,11 +3,12 @@ import Image from "next/image";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <div className={cn("relative w-32 h-12", className)}>
+    <div className={cn("relative", className)}>
       <Image 
-        src="https://cdn.bucket.opendex.dev/danny-carl/logo-danny-carl.webp" 
+        src="https://cdn.bucket.opendex.dev/dany-carl/logo-danny-carl.webp" 
         alt="Dany Carl Logo"
-        fill
+        width={15}
+        height={15}
         className="object-contain"
         priority
       />
