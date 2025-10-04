@@ -1,5 +1,4 @@
 import AlbumCard from "@/components/album-card";
-import { cn } from "@/lib/utils";
 
 const albums = [
   { title: 'Faded Echoes', year: '2023', imageId: 'album-1' },
@@ -12,14 +11,14 @@ const albums = [
 
 export default function DiscographySection() {
   return (
-    <section className="w-full py-20 md:py-32">
+    <section className="w-full py-20 md:py-32 bg-background z-10 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-primary">
             Discography
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            A collection of past and present releases.
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore a sonic journey through a universe of fading echoes and neon shadows.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -27,7 +26,7 @@ export default function DiscographySection() {
             <div
               key={album.title}
               className="animate-fade-in-up"
-              style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
+              style={{ animationDelay: `${200 * i}ms`, animationFillMode: 'backwards' }}
             >
               <AlbumCard album={album} />
             </div>

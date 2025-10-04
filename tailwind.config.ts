@@ -109,6 +109,10 @@ export default {
             backgroundPosition: '350% 50%, 350% 50%',
           },
         },
+        pulse: {
+          '0%, 100%': { transform: 'scaleY(1)', 'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)' },
+          '50%': { transform: 'scaleY(0.2)', 'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)' }
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -117,6 +121,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.8s ease-out both',
         'background-pan': 'background-pan 15s ease-in-out infinite',
         aurora: 'aurora 20s infinite linear',
+        pulse: 'pulse 1.5s infinite',
       },
     },
   },

@@ -1,0 +1,52 @@
+import { Button } from "@/components/ui/button";
+import { Ticket } from "lucide-react";
+
+const tourDates = [
+  { city: "Neo-Kyoto", venue: "CyberDome", date: "20 OCT" },
+  { city: "Aethelburg", venue: "The Void", date: "25 OCT" },
+  { city: "New Atlantis", venue: "Triton Arena", date: "02 NOV" },
+  { city: "Olympus Mons", venue: "Starlight Stage", date: "15 NOV" },
+];
+
+export default function TourSection() {
+  return (
+    <section className="w-full py-20 md:py-32 bg-background/80 backdrop-blur-sm">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-primary">
+            Upcoming Dates
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Experience the sound of the future live. Join the vision.
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">
+          <ul className="space-y-4">
+            {tourDates.map((tour, i) => (
+              <li
+                key={i}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
+              >
+                <div className="flex items-center p-4 rounded-lg bg-card/50 border border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 transform hover:scale-[1.02] group">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 text-primary rounded-md mr-6">
+                    <span className="text-2xl font-headline font-bold">{tour.date.split(' ')[0]}</span>
+                    <span className="text-xs font-body tracking-widest absolute mt-8">{tour.date.split(' ')[1]}</span>
+                  </div>
+                  <div className="flex-grow">
+                    <h3 className="text-xl font-bold font-headline text-foreground">{tour.city}</h3>
+                    <p className="text-muted-foreground">{tour.venue}</p>
+                  </div>
+                  <Button variant="ghost" size="icon" className="w-auto px-4 ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 text-primary-foreground hover:bg-primary">
+                    <Ticket className="mr-2 h-4 w-4" />
+                    Tickets
+                  </Button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}

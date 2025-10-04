@@ -2,22 +2,12 @@ import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={cn("text-primary", className)}
-      aria-hidden="true"
-    >
-      <path
-        d="M10 90 L30 10 L50 90 L70 10 L90 90"
-        stroke="currentColor"
-        strokeWidth="8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <div className={cn("flex items-end gap-1 h-10 w-auto", className)}>
+      <span className="w-2 h-4 bg-primary animate-pulse" style={{animationDelay: '0ms'}}/>
+      <span className="w-2 h-10 bg-primary animate-pulse" style={{animationDelay: '100ms'}}/>
+      <span className="w-2 h-6 bg-primary animate-pulse" style={{animationDelay: '200ms'}}/>
+      <span className="w-2 h-8 bg-primary animate-pulse" style={{animationDelay: '300ms'}}/>
+       <span className="w-2 h-5 bg-primary animate-pulse" style={{animationDelay: '400ms'}}/>
+    </div>
   );
 }
