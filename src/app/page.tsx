@@ -1,18 +1,22 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import { VideoText } from "@/components/video-text";
 
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center text-center overflow-hidden">
-      <div className="relative z-10 flex flex-col items-center p-4">
-        <div className="animate-fade-in">
-          <h1 
-            className="text-7xl md:text-9xl font-headline font-bold tracking-tighter uppercase text-transparent bg-clip-text bg-gradient-to-b from-foreground to-foreground/50"
-            style={{ WebkitTextStroke: '1px hsla(var(--primary), 0.5)' }}
+      <div className="relative z-10 flex flex-col items-center p-4 w-full">
+        <div className="animate-fade-in w-full h-64 md:h-96">
+          <VideoText
+            src="https://ls29t3z55w.ufs.sh/f/JEKFIJDsOBct0vrmLYJRG8BKHmvZQkWJ9ElIVcNfzPg63Mbo"
+            fontFamily="'Space Grotesk', sans-serif"
+            fontSize={18}
+            letterSpacing="-0.05em"
+            textTransform="uppercase"
           >
             DANY CARL
-          </h1>
+          </VideoText>
         </div>
         <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-6 mb-10 animate-fade-in animation-delay-200">
           Como DJ, mi objetivo es crear una experiencia musical inolvidable que conecte a las personas y las haga vibrar.
