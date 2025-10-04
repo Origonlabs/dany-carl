@@ -28,13 +28,13 @@ export default function HeroSection() {
         <div className="animate-fade-in">
           <h1 
             className="text-6xl md:text-8xl font-headline font-bold tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary glitch"
-            data-text="ECHOSCAPE"
+            data-text="DANY CARL"
           >
-            ECHOSCAPE
+            DANY CARL
           </h1>
         </div>
         <p className="max-w-2xl mx-auto text-lg text-foreground/80 mb-8 animate-fade-in animation-delay-200">
-          Welcome to the world of EchoVision. A journey through soundscapes of a world yet to come.
+          Como DJ, mi objetivo es crear una experiencia musical inolvidable que conecte a las personas y las haga vibrar.
         </p>
         <Button asChild size="lg" className="font-bold text-lg bg-primary/90 hover:bg-primary text-primary-foreground transition-all duration-300 transform hover:scale-105 animate-fade-in animation-delay-400 rounded-full shadow-lg shadow-primary/30">
           <Link href="#discography">

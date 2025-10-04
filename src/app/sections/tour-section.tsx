@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Ticket } from "lucide-react";
 
 const tourDates = [
-  { city: "Neo-Kyoto", venue: "CyberDome", date: "20 OCT" },
-  { city: "Aethelburg", venue: "The Void", date: "25 OCT" },
-  { city: "New Atlantis", venue: "Triton Arena", date: "02 NOV" },
-  { city: "Olympus Mons", venue: "Starlight Stage", date: "15 NOV" },
+  { city: "Tomorrowland", venue: "Dreamville", date: "15 JUL" },
+  { city: "Ushuaia", venue: "Ibiza", date: "22 JUL" },
+  { city: "EDC", venue: "Mexico", date: "30 JUL" },
 ];
 
 export default function TourSection() {
