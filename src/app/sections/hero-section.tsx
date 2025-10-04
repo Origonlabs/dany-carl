@@ -32,7 +32,7 @@ export default function HeroSection() {
         <p className="max-w-2xl mx-auto text-lg text-foreground/80 mb-10 animate-fade-in animation-delay-200">
           Como DJ, mi objetivo es crear una experiencia musical inolvidable que conecte a las personas y las haga vibrar.
         </p>
-        <Button asChild size="lg" className="font-bold text-lg transition-transform transform hover:scale-105 animate-fade-in animation-delay-400 rounded-full shadow-lg">
+        <Button asChild size="lg" className="font-bold text-lg transition-transform transform hover:scale-105 animate-fade-in animation-delay-400 rounded-full shadow-lg bg-primary text-primary-foreground hover:bg-primary/90">
           <Link href="#discography">
             Listen Now
             <ArrowRight className="ml-2 h-5 w-5" />

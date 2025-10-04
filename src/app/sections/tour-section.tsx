@@ -27,16 +27,16 @@ export default function TourSection() {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${150 * i}ms`, animationFillMode: 'backwards' }}
               >
-                <div className="flex items-center p-6 rounded-lg bg-card border hover:bg-secondary/50 transition-colors duration-300 group">
-                  <div className="flex flex-col items-center justify-center w-16 text-center mr-6">
-                    <span className="text-3xl font-headline font-bold text-primary">{tour.date.split(' ')[0]}</span>
+                <div className="flex items-center p-6 rounded-lg bg-card border border-border hover:bg-secondary/50 transition-colors duration-300 group hover:border-primary/50">
+                  <div className="flex flex-col items-center justify-center w-20 text-center mr-6">
+                    <span className="text-4xl font-headline font-bold text-primary">{tour.date.split(' ')[0]}</span>
                     <span className="text-sm font-body tracking-wider text-muted-foreground">{tour.date.split(' ')[1]}</span>
                   </div>
                   <div className="flex-grow">
                     <h3 className="text-xl font-bold font-headline text-foreground">{tour.city}</h3>
                     <p className="text-muted-foreground">{tour.venue}</p>
                   </div>
-                  <Button variant="outline" className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Button variant="outline" className="ml-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/10 border-primary/20 hover:bg-primary/20 text-primary-foreground">
                     <Ticket className="mr-2 h-4 w-4" />
                     Tickets
                   </Button>

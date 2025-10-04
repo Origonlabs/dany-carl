@@ -3,7 +3,7 @@
 import { Music, Image as ImageIcon, Mail, AlertTriangle } from "lucide-react";
 
 const InfoCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
-  <div className="bg-card rounded-lg border p-6 transition-shadow duration-300 hover:shadow-lg">
+  <div className="bg-card rounded-lg border border-border p-6 transition-shadow duration-300 hover:shadow-lg hover:border-primary/50">
     <div className="flex items-start">
       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4 shrink-0">
         {icon}
@@ -20,7 +20,7 @@ const InfoCard = ({ icon, title, children }: { icon: React.ReactNode, title: str
 
 export default function CopyrightSection() {
   return (
-    <section id="copyright" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
+    <section id="copyright" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter text-foreground">
