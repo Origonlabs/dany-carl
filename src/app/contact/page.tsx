@@ -29,7 +29,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function ContactSection() {
+export default function ContactPage() {
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({

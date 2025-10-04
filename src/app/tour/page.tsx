@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 const tourDates = [
   { city: "Tomorrowland", venue: "Dreamville", date: "15 JUL" },
@@ -7,7 +7,7 @@ const tourDates = [
   { city: "EDC", venue: "Mexico", date: "30 JUL" },
 ];
 
-export default function TourSection() {
+export default function TourPage() {
   return (
     <section id="tour" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

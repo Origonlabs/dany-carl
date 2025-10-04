@@ -1,7 +1,7 @@
 "use client";
 import { ShieldCheck, ImageIcon, MicVocal, MessageSquareWarning } from 'lucide-react';
 
-export default function CopyrightSection() {
+export default function CopyrightPage() {
   return (
     <section id="copyright" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,4 @@
-export default function StorySection() {
+export default function StoryPage() {
   return (
     <section id="story" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

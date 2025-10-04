@@ -9,7 +9,7 @@ const albums = [
   { title: "Singularity", year: "2018", imageId: "album-6" },
 ];
 
-export default function DiscographySection() {
+export default function DiscographyPage() {
   return (
     <section id="discography" className="w-full py-24 sm:py-32 lg:py-40">
        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
