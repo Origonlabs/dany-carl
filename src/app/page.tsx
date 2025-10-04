@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { VideoText } from "@/components/video-text";
+import { GlowButton } from "@/components/glow-button";
 
 export default function HeroSection() {
   return (
@@ -22,12 +22,10 @@ export default function HeroSection() {
           Como DJ, mi objetivo es crear una experiencia musical inolvidable que conecte a las personas y las haga vibrar.
         </p>
         <div className="animate-fade-in animation-delay-400">
-          <Button asChild size="lg" variant="outline" className="font-bold text-lg transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:border-primary">
-            <Link href="/discography">
-              Explorar Música
-              <ArrowDown className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <GlowButton href="/discography" variant="blue">
+            Explorar Música
+            <ArrowDown className="ml-2 h-5 w-5" />
+          </GlowButton>
         </div>
       </div>
     </section>
