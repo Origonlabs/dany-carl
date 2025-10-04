@@ -1,4 +1,5 @@
 "use client";
+import { ShieldCheck, ImageIcon, MicVocal, MessageSquareWarning } from 'lucide-react';
 
 export default function CopyrightSection() {
   return (
@@ -12,30 +13,40 @@ export default function CopyrightSection() {
             Toda la música, remixes e imágenes presentadas en esta plataforma son de DANY CARL y están protegidas por derechos de autor.
           </p>
         </div>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}>
-            <h3 className="font-headline text-xl font-bold text-foreground mb-3">Remixes</h3>
-            <p className="text-muted-foreground">
-              Los remixes creados por DANY CARL son versiones únicas con un enfoque artístico propio. Si deseas usarlos en tu contenido, debes dar créditos, ya sea en el título o en la descripción, mencionando mi nombre (DANY CARL) y enlazando mis redes o plataformas.
-            </p>
+            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
+              <MicVocal className="h-8 w-8 mb-4 text-primary" />
+              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Remixes</h3>
+              <p className="text-muted-foreground">
+                Si deseas usarlos en tu contenido, debes dar créditos mencionando "DANY CARL" y enlazando mis redes.
+              </p>
+            </div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
-            <h3 className="font-headline text-xl font-bold text-foreground mb-3">Imágenes y Diseño</h3>
-            <p className="text-muted-foreground">
-              Las imágenes utilizadas en esta plataforma (portadas, banners y contenido visual) han sido creadas y editadas por DANY CARL. Puedes usarlas libremente, pero sin modificarlas ni editarlas de ninguna forma.
-            </p>
+            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
+              <ImageIcon className="h-8 w-8 mb-4 text-primary" />
+              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Imágenes</h3>
+              <p className="text-muted-foreground">
+                Puedes usarlas libremente, pero sin modificarlas ni editarlas de ninguna forma.
+              </p>
+            </div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}>
-            <h3 className="font-headline text-xl font-bold text-foreground mb-3">Contacto para Consultas</h3>
-            <p className="text-muted-foreground">
-              Para cualquier consulta, puedes contactarme a través de mis redes sociales o el formulario de contacto.
-            </p>
+            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
+              <ShieldCheck className="h-8 w-8 mb-4 text-primary" />
+              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Consultas</h3>
+              <p className="text-muted-foreground">
+                Para cualquier consulta, contáctame a través de mis redes sociales o el formulario de contacto.
+              </p>
+            </div>
           </div>
           <div className="animate-fade-in-up" style={{ animationDelay: '500ms', animationFillMode: 'backwards' }}>
-             <div className="border-l-4 border-destructive p-4 bg-destructive/5">
-                <h3 className="font-headline text-xl font-bold text-destructive mb-2">Advertencia Importante</h3>
+             <div className="border-l-4 border-destructive p-6 bg-destructive/10 h-full">
+                <MessageSquareWarning className="h-8 w-8 mb-4 text-destructive" />
+                <h3 className="font-headline text-xl font-bold text-destructive mb-2">Advertencia</h3>
                 <p className="text-destructive/80">
-                  El uso no autorizado, monetización, la distribución sin créditos o la modificación de mi contenido sin permiso puede resultar en reclamos de derechos de autor o medidas legales.
+                  El uso no autorizado, monetización o distribución sin créditos puede resultar en medidas legales.
                 </p>
             </div>
           </div>

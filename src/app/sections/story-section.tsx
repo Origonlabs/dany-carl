@@ -1,6 +1,6 @@
 export default function StorySection() {
   return (
-    <section id="story" className="w-full py-24 sm:py-32 lg:py-40 bg-background/80 backdrop-blur-sm">
+    <section id="story" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
