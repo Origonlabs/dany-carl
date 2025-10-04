@@ -96,32 +96,55 @@ export default {
           from: { opacity: '0', transform: 'translateY(20px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
-        'background-pan': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
         aurora: {
           from: {
-            backgroundPosition: '50% 50%, 50% 50%',
+            '--x': '50%',
+            '--y': '50%',
+            '--x2': '50%',
+            '--y2': '50%',
+          },
+          '12.5%': {
+            '--x': '25%',
+            '--y': '75%',
+          },
+          '25%': {
+            '--x2': '75%',
+            '--y2': '75%',
+          },
+          '37.5%': {
+            '--x': '75%',
+            '--y': '25%',
+          },
+          '50%': {
+            '--x2': '25%',
+            '--y2': '25%',
+          },
+          '62.5%': {
+            '--x': '0%',
+            '--y': '50%',
+          },
+          '75%': {
+            '--x2': '100%',
+            '--y2': '50%',
+          },
+          '87.5%': {
+            '--x': '75%',
+            '--y': '75%',
           },
           to: {
-            backgroundPosition: '350% 50%, 350% 50%',
+            '--x': '50%',
+            '--y': '50%',
+            '--x2': '50%',
+            '--y2': '50%',
           },
         },
-        pulse: {
-          '0%, 100%': { transform: 'scaleY(1)', 'animation-timing-function': 'cubic-bezier(0.8, 0, 1, 1)' },
-          '50%': { transform: 'scaleY(0.2)', 'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)' }
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 1s ease-out forwards',
         'fade-in-up': 'fade-in-up 0.8s ease-out both',
-        'background-pan': 'background-pan 15s ease-in-out infinite',
         aurora: 'aurora 20s infinite linear',
-        pulse: 'pulse 1.5s infinite',
       },
     },
   },

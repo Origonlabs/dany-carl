@@ -1,18 +1,18 @@
 export default function StorySection() {
   return (
-    <section id="story" className="w-full py-24 sm:py-32 lg:py-40 bg-white">
+    <section id="story" className="w-full py-24 sm:py-32 lg:py-40 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-gray-900 uppercase">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground uppercase">
               La Historia de DANY CARL
             </h2>
-            <p className="mt-4 text-lg text-gray-600 font-headline">
+            <p className="mt-4 text-lg text-muted-foreground font-headline">
               Del sueño a la realidad
             </p>
           </div>
 
-          <div className="prose prose-lg lg:prose-xl max-w-none mx-auto text-gray-700 font-body space-y-6 animate-fade-in-up animation-delay-200">
+          <div className="prose prose-lg lg:prose-xl max-w-none mx-auto text-foreground/80 font-body space-y-6 animate-fade-in-up animation-delay-200">
             <p>
               Era el 13 de noviembre de 2003, cuando un niño nació en una pequeña ciudad, sin saber aún que su vida estaría marcada por la música. Desde muy pequeño, mostró una curiosidad infinita por el sonido, siempre atento a cada melodía que llegaba a sus oídos. A medida que fue creciendo, el niño descubrió que la música podía ser su refugio, su forma de expresión, y fue en 2018, a los 15 años, cuando se encontró por primera vez con el mundo de la música electrónica. Fue una canción, "Waiting For Love" de Avicii, la que lo hizo enamorarse de este género. A partir de ese momento, no hubo vuelta atrás: la música electrónica se convirtió en su pasión.
             </p>
@@ -44,11 +44,11 @@ export default function StorySection() {
               Hoy en día, DANY CARL sigue siendo el joven que nunca dejó de soñar. Con más de 30,000 seguidores en YouTube y más de 100,000 seguidores en TikTok, su música sigue inspirando a quienes la escuchan. Y sabe que el camino está lleno de desafíos, pero también de posibilidades. Sabe que, aunque el futuro es incierto, su pasión nunca morirá.
             </p>
             
-            <blockquote className="border-l-4 border-primary pl-6 italic text-gray-800 my-12">
+            <blockquote className="border-l-4 border-primary pl-6 italic text-foreground my-12">
               <p>
                 "Persigue siempre tus sueños, sin importar lo que se cruce en tu camino. Habrá momentos difíciles, obstáculos que parecerán imposibles de superar, pero es precisamente en esos momentos cuando más debes aferrarte a tu propósito. Te tropezarás muchas veces, caerás, sentirás que todo se desmorona a tu alrededor, pero lo importante es levantarse. No dejes que el miedo o las dudas te detengan. Aprende de cada error, porque cada uno de ellos te acerca más a la meta. Recuerda siempre por qué empezaste, lo que te motivó, esa chispa que encendió tu pasión. La paciencia y la perseverancia son claves: lo que hoy parece imposible, mañana será tu logro. Y cuando llegues al éxito, recuerda que no es el final, sino un nuevo comienzo para seguir soñando más alto. Rendirse no es una opción. Si tienes el corazón puesto en lo que haces, lo lograrás."
               </p>
-              <footer className="mt-4 text-right font-headline text-gray-900 not-italic">- danycarlmusic</footer>
+              <footer className="mt-4 text-right font-headline text-foreground/90 not-italic">- danycarlmusic</footer>
             </blockquote>
           </div>
         </div>
