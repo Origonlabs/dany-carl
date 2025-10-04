@@ -38,8 +38,8 @@ export default function Header() {
                     <Link 
                       href={link.href} 
                       className={cn(
-                        buttonVariants({ variant: "ghost" }),
-                        "text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors duration-300"
+                        buttonVariants({ variant: "outline" }),
+                        "bg-white/80 text-foreground/80 hover:bg-white hover:text-primary transition-all duration-300"
                       )}
                     >
                       {link.label}
