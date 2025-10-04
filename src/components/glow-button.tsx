@@ -93,28 +93,25 @@ const useTheme = () => {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const checkTheme = () => {
-      const isDarkMode =
-        document.documentElement.classList.contains("dark") ||
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setIsDark(isDarkMode);
-    };
+    // On mount, check if dark class is present
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    setIsDark(isDarkMode);
 
-    checkTheme();
-
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "class"
+        ) {
+          const isDarkMode = (mutation.target as HTMLElement).classList.contains("dark");
+          setIsDark(isDarkMode);
+        }
+      });
     });
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    mediaQuery.addEventListener("change", checkTheme);
+    observer.observe(document.documentElement, { attributes: true });
 
-    return () => {
-      observer.disconnect();
-      mediaQuery.removeEventListener("change", checkTheme);
-    };
+    return () => observer.disconnect();
   }, []);
 
   return isDark;
