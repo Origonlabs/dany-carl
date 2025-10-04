@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/logo';
-import { Button } from './ui/button';
+import { Button, buttonVariants } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Menu } from 'lucide-react';
 import React from 'react';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
     { href: "/", label: "Inicio" },
@@ -31,9 +32,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:grow">
-            <ul className="flex grow justify-end flex-wrap items-center gap-x-8 text-lg font-medium">
+            <ul className="flex grow justify-end flex-wrap items-center gap-x-4 text-lg font-medium">
               {navLinks.slice(1).map(link => (
-                  <li key={link.href}><Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors duration-300">{link.label}</Link></li>
+                  <li key={link.href}>
+                    <Link 
+                      href={link.href} 
+                      className={cn(
+                        buttonVariants({ variant: "ghost" }),
+                        "text-muted-foreground hover:text-primary hover:bg-primary/5 transition-colors duration-300"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
               ))}
             </ul>
           </nav>
