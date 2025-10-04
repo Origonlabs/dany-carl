@@ -1,9 +1,16 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <div className={cn("font-headline text-3xl font-bold tracking-wider text-foreground", className)}>
-      DANY CARL
+    <div className={cn("relative w-32 h-12", className)}>
+      <Image 
+        src="/logo-danny-carl.webp" 
+        alt="Dany Carl Logo"
+        fill
+        className="object-contain"
+        priority
+      />
     </div>
   );
 }

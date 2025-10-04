@@ -49,7 +49,7 @@ export default function Header() {
               </SheetTrigger>
               <SheetContent side="left">
                 <nav className="flex flex-col gap-y-6 pt-10">
-                    <Link href="/" className="mb-4">
+                    <Link href="/" className="mb-4" onClick={() => setIsOpen(false)}>
                         <Logo />
                     </Link>
                     {navLinks.map(link => (
