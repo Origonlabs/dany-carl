@@ -11,7 +11,8 @@ const albums = [
 
 export default function DiscographySection() {
   return (
-    <section id="discography" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
+    <section id="discography" className="w-full py-24 sm:py-32 lg:py-40">
+       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
@@ -33,6 +34,7 @@ export default function DiscographySection() {
           ))}
         </div>
       </div>
+       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
     </section>
   );
 }

@@ -1,6 +1,6 @@
 export default function VideoSection() {
     return (
-      <section id="video" className="w-full py-24 sm:py-32 lg:py-40 bg-secondary/50">
+      <section id="video" className="w-full py-24 sm:py-32 lg:py-40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
@@ -11,7 +11,7 @@ export default function VideoSection() {
             </p>
           </div>
           <div 
-            className="max-w-4xl mx-auto animate-fade-in-up aspect-video border" 
+            className="max-w-4xl mx-auto animate-fade-in-up aspect-video rounded-lg overflow-hidden border-2 border-primary/20 shadow-xl shadow-primary/10"
             style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}
           >
             <iframe 

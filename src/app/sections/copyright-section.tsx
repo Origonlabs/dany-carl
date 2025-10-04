@@ -14,44 +14,49 @@ export default function CopyrightSection() {
           </p>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}>
-            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
-              <MicVocal className="h-8 w-8 mb-4 text-primary" />
-              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Remixes</h3>
-              <p className="text-muted-foreground">
-                Si deseas usarlos en tu contenido, debes dar créditos mencionando "DANY CARL" y enlazando mis redes.
-              </p>
-            </div>
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
-            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
-              <ImageIcon className="h-8 w-8 mb-4 text-primary" />
-              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Imágenes</h3>
-              <p className="text-muted-foreground">
-                Puedes usarlas libremente, pero sin modificarlas ni editarlas de ninguna forma.
-              </p>
-            </div>
-          </div>
-          <div className="animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}>
-            <div className="bg-background/50 p-6 rounded-none border border-border h-full">
-              <ShieldCheck className="h-8 w-8 mb-4 text-primary" />
-              <h3 className="font-headline text-xl font-bold text-foreground mb-3">Consultas</h3>
-              <p className="text-muted-foreground">
-                Para cualquier consulta, contáctame a través de mis redes sociales o el formulario de contacto.
-              </p>
-            </div>
-          </div>
+          <CopyrightCard 
+            icon={<MicVocal className="h-10 w-10 mb-4 text-primary" />}
+            title="Remixes"
+            description="Si deseas usarlos en tu contenido, debes dar créditos mencionando 'DANY CARL' y enlazando mis redes."
+            delay={200}
+          />
+          <CopyrightCard 
+            icon={<ImageIcon className="h-10 w-10 mb-4 text-primary" />}
+            title="Imágenes"
+            description="Puedes usarlas libremente, pero sin modificarlas ni editarlas de ninguna forma."
+            delay={300}
+          />
+          <CopyrightCard 
+            icon={<ShieldCheck className="h-10 w-10 mb-4 text-primary" />}
+            title="Consultas"
+            description="Para cualquier consulta, contáctame a través de mis redes sociales o el formulario de contacto."
+            delay={400}
+          />
           <div className="animate-fade-in-up" style={{ animationDelay: '500ms', animationFillMode: 'backwards' }}>
-             <div className="border-l-4 border-destructive p-6 bg-destructive/10 h-full">
-                <MessageSquareWarning className="h-8 w-8 mb-4 text-destructive" />
-                <h3 className="font-headline text-xl font-bold text-destructive mb-2">Advertencia</h3>
-                <p className="text-destructive/80">
-                  El uso no autorizado, monetización o distribución sin créditos puede resultar en medidas legales.
-                </p>
+            <div className="bg-destructive/10 border-l-4 border-destructive p-8 rounded-lg h-full flex flex-col">
+              <MessageSquareWarning className="h-10 w-10 mb-4 text-destructive" />
+              <h3 className="font-headline text-xl font-bold text-destructive mb-3">Advertencia</h3>
+              <p className="text-destructive/80">
+                El uso no autorizado, monetización o distribución sin créditos puede resultar en medidas legales.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function CopyrightCard({ icon, title, description, delay }: { icon: React.ReactNode, title: string, description: string, delay: number }) {
+  return (
+    <div className="animate-fade-in-up" style={{ animationDelay: `${delay}ms`, animationFillMode: 'backwards' }}>
+      <div className="bg-secondary p-8 rounded-lg h-full text-center flex flex-col items-center">
+        {icon}
+        <h3 className="font-headline text-xl font-bold text-foreground mb-3">{title}</h3>
+        <p className="text-muted-foreground">
+          {description}
+        </p>
+      </div>
+    </div>
   );
 }

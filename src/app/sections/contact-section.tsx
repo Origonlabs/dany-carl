@@ -51,7 +51,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-24 sm:py-32 lg:py-40 bg-background">
+    <section id="contact" className="w-full py-24 sm:py-32 lg:py-40">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-foreground">
@@ -61,17 +61,17 @@ export default function ContactSection() {
             ¿Tienes un proyecto en mente o quieres contratarme para un evento? Hablemos.
           </p>
         </div>
-        <div className="max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: `200ms`, animationFillMode: 'backwards' }}>
+        <div className="max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Nombre</FormLabel>
+                    <FormLabel className="text-lg">Nombre</FormLabel>
                     <FormControl>
-                      <Input placeholder="Tu nombre" {...field} className="rounded-none" />
+                      <Input placeholder="Tu nombre" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -82,9 +82,9 @@ export default function ContactSection() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="text-lg">Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="tu.email@ejemplo.com" {...field} className="rounded-none" />
+                      <Input placeholder="tu.email@ejemplo.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -95,19 +95,19 @@ export default function ContactSection() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Mensaje</FormLabel>
+                    <FormLabel className="text-lg">Mensaje</FormLabel>
                     <FormControl>
                       <Textarea
                         placeholder="Háblame de tu proyecto o evento..."
                         {...field}
-                        className="min-h-[150px] rounded-none"
+                        className="min-h-[150px]"
                       />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full font-bold text-lg rounded-none">
+              <Button type="submit" size="lg" className="w-full font-bold text-lg">
                 Enviar Mensaje
                 <Send className="ml-2 h-5 w-5" />
               </Button>

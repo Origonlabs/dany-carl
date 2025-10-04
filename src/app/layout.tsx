@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from '@/lib/utils';
-import { Analytics } from '@vercel/analytics/react';
+import Particles from '@/components/particles';
 
 export const metadata: Metadata = {
   title: 'DANY CARL',
@@ -22,6 +22,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased", "min-h-screen bg-background")}>
+        <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
         {children}
         <Toaster />
       </body>

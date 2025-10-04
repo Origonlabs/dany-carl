@@ -12,7 +12,7 @@ export default function StorySection() {
             </p>
           </div>
 
-          <div className="prose prose-lg lg:prose-xl max-w-none mx-auto text-foreground/80 font-body space-y-6 animate-fade-in-up animation-delay-200">
+          <div className="prose prose-lg prose-invert lg:prose-xl max-w-none mx-auto text-foreground/80 font-body space-y-8 animate-fade-in-up animation-delay-200">
             <p>
               Era el 13 de noviembre de 2003, cuando un niño nació en una pequeña ciudad, sin saber aún que su vida estaría marcada por la música. Desde muy pequeño, mostró una curiosidad infinita por el sonido, siempre atento a cada melodía que llegaba a sus oídos. A medida que fue creciendo, el niño descubrió que la música podía ser su refugio, su forma de expresión, y fue en 2018, a los 15 años, cuando se encontró por primera vez con el mundo de la música electrónica. Fue una canción, "Waiting For Love" de Avicii, la que lo hizo enamorarse de este género. A partir de ese momento, no hubo vuelta atrás: la música electrónica se convirtió en su pasión.
             </p>

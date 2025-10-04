@@ -48,10 +48,10 @@ const WhatsAppIcon = (props: React.ComponentProps<'svg'>) => (
   
 export default function Footer() {
   return (
-    <footer className="bg-secondary/50 border-t">
+    <footer className="border-t border-white/10 mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center">
-            <Link href="/" aria-label="Dany Carl Homepage" className="mb-6">
+            <Link href="/" aria-label="Dany Carl Homepage" className="mb-8">
               <Logo />
             </Link>
           <div className="flex space-x-6">
