@@ -3,6 +3,7 @@ import HeroSection from "@/app/sections/hero-section";
 import DiscographySection from "@/app/sections/discography-section";
 import MusicSection from "@/app/sections/music-section";
 import TourSection from "@/app/sections/tour-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <MusicSection />
         <TourSection />
       </main>
+      <Footer />
     </div>
   );
 }
