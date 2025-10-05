@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/logo';
-import { Button, buttonVariants } from './ui/button';
+import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Menu } from 'lucide-react';
 import React from 'react';
-import { cn } from '@/lib/utils';
+import gsap from 'gsap';
 
 const navLinks = [
     { href: "/", label: "Inicio" },
@@ -20,6 +20,35 @@ const navLinks = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const navRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (!navRef.current) return;
+
+    const ctx = gsap.context(() => {
+      gsap.from(navRef.current, {
+        opacity: 0,
+        y: -24,
+        duration: 0.8,
+        ease: 'power3.out',
+      });
+
+      const items = navRef.current.querySelectorAll('li');
+      if (items.length) {
+        gsap.from(items, {
+          opacity: 0,
+          y: -12,
+          stagger: 0.08,
+          delay: 0.2,
+          duration: 0.6,
+          ease: 'power2.out',
+        });
+      }
+    }, navRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <header className="w-full z-50 p-4 sm:p-6 lg:p-8">
       <div className="container mx-auto">
@@ -31,22 +60,24 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex md:grow">
-            <ul className="flex grow justify-end flex-wrap items-center gap-x-4 text-lg font-medium">
-              {navLinks.slice(1).map(link => (
+          <nav className="hidden md:flex md:grow justify-end">
+            <div
+              ref={navRef}
+              className="bg-white border border-border/40 rounded-full px-6 py-2 shadow-sm"
+            >
+              <ul className="flex items-center gap-6 text-base font-medium text-foreground">
+                {navLinks.slice(1).map(link => (
                   <li key={link.href}>
-                    <Link 
-                      href={link.href} 
-                      className={cn(
-                        buttonVariants({ variant: "outline" }),
-                        "bg-white/80 text-foreground/80 hover:bg-white hover:text-primary transition-all duration-300"
-                      )}
+                    <Link
+                      href={link.href}
+                      className="transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
                   </li>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </div>
           </nav>
 
           {/* Mobile Navigation */}

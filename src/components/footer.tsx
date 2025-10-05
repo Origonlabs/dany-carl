@@ -50,46 +50,48 @@ const WhatsAppIcon = (props: React.ComponentProps<'svg'>) => (
 export default function Footer() {
   return (
     <footer className="mt-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-transparent">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-4 sm:px-6 lg:px-8 py-2">
           <Link href="/" aria-label="Dany Carl Homepage" className="shrink-0">
             <Logo />
           </Link>
-          <div className="flex space-x-4">
-            <Link href="https://www.youtube.com/@Danycarlmusic" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <div className="flex items-center gap-4 text-muted-foreground">
+            <Link href="https://www.youtube.com/@Danycarlmusic" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               <Youtube className="h-5 w-5" />
             </Link>
-            <Link href="https://www.tiktok.com/@danycarlmusic" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.tiktok.com/@danycarlmusic" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               <TikTokIcon className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="hover:text-primary transition-colors">
               <Instagram className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="hover:text-primary transition-colors">
               <WhatsAppIcon className="h-5 w-5" />
             </Link>
-            <Link href="https://www.facebook.com/dany.carl.188597/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="https://www.facebook.com/dany.carl.188597/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="hover:text-primary transition-colors">
               <SpotifyIcon className="h-5 w-5" />
             </Link>
           </div>
           <p className="text-sm text-muted-foreground text-center md:text-right">
-            &copy; {new Date().getFullYear()} Dany Carl. All rights reserved.
+            &copy; {new Date().getFullYear()} Dany Carl. Todos los derechos reservados.
           </p>
         </div>
-        <div className="mt-8 pt-8 border-t border-border/20 flex justify-center items-center gap-2">
-            <p className="text-xs text-muted-foreground">Desarrollado por</p>
-            <a href="https://origon.dev" target="_blank" rel="noopener noreferrer">
-                <Image 
-                    src="https://cdn.origonlabs.opendex.dev/icons/Logo_Origon_LInux.svg"
-                    alt="Origon Logo"
-                    width={80}
-                    height={20}
-                    className="object-contain"
-                />
-            </a>
+      </div>
+      <div className="bg-white border-t border-[#f8c9a6]/60">
+        <div className="container mx-auto flex justify-center items-center gap-2 px-4 sm:px-6 lg:px-8 py-0">
+          <p className="text-xs text-muted-foreground">Desarrollado por</p>
+          <a href="https://origon.dev" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="https://cdn.origonlabs.opendex.dev/icons/Logo_Origon_LInux.svg"
+              alt="Origon Logo"
+              width={24}
+              height={6}
+              className="object-contain"
+            />
+          </a>
         </div>
       </div>
     </footer>
