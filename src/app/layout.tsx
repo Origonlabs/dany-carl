@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Background from '@/components/background';
+import { DevtoolsGuard } from '@/components/devtools-guard';
 
 export const metadata: Metadata = {
   title: 'DANY CARL',
@@ -32,6 +33,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <DevtoolsGuard />
         <Toaster />
       </body>
     </html>
